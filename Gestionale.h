@@ -9,17 +9,17 @@
 #include "PC.h"
 
 
-class Gestionale {
-    std::vector<PC> lista_pc;
+static class Gestionale {
+    static std::vector<PC>* lista_pc;
+    static int trova_idx(uint16_t codice);
 
 public:
-    Gestionale();
-    bool aggiungi_pc(PC pc);
-    bool rimuovi_pc(PC pc);
-    PC* trova_pc(uint16_t codice);
-    std::vector<PC> pc_meglio_di(uint ram, uint clock, uint disco);
-    bool carica_da_file(std::fstream file);
-    bool salva_in_file(std::fstream file);
+    static bool aggiungi_pc(const PC &pc);
+    static bool rimuovi_pc(PC pc);
+    static PC* trova_pc(uint16_t codice);
+    static std::vector<PC>* pc_meglio_di(uint ram, uint clock, uint disco);
+    static bool carica_da_file(std::fstream file);
+    static bool salva_in_file(std::fstream file);
 };
 
 
