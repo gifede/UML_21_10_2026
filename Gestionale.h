@@ -12,7 +12,6 @@
 static class Gestionale {
     static std::vector<PC>* lista_pc;
     static int trova_idx(uint16_t codice);
-
 public:
     static bool aggiungi_pc(const PC &pc);
     static bool rimuovi_pc(PC pc);
