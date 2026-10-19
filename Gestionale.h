@@ -9,12 +9,14 @@
 #include "PC.h"
 
 
-static class Gestionale {
+class Gestionale {
     static uint16_t ultimo_codice;
     static std::vector<PC>* lista_pc;
     static int trova_idx(uint16_t codice);
 public:
     static bool aggiungi_pc(const PC &pc);
+    static uint16_t nuovo_pc(const std::string& marca_c, const std::string& modello_c,
+        uint cpu, uint ram, uint disco, float monitor, uint16_t anno);
     static bool rimuovi_pc(PC pc);
     static PC* trova_pc(uint16_t codice);
     static std::vector<PC>* pc_meglio_di(uint ram, uint clock, uint disco);

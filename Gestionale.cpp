@@ -30,6 +30,15 @@ bool Gestionale::aggiungi_pc(const PC &pc) {
     return true;
 }
 
+uint16_t Gestionale::nuovo_pc(const std::string& marca_c, const std::string& modello_c,
+        uint cpu, uint ram, uint disco, float monitor, uint16_t anno) {
+    PC *pc = new PC(++ultimo_codice, marca_c, modello_c, cpu, ram, disco, monitor, anno);
+    bool res = aggiungi_pc(*pc);
+    if (res)
+        return ultimo_codice;
+    return 0;
+}
+
 bool Gestionale::rimuovi_pc(const PC pc) {
     int idx = trova_idx(pc.get_codice());
     if (idx == -1)
