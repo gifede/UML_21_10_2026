@@ -30,6 +30,8 @@ public:
     uint get_disco() const;
     float get_monitor() const;
     uint16_t get_anno() const;
+    std::string to_string() const;
+    static PC from_string(std::string_view line);
 };
 
 

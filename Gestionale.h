@@ -18,8 +18,8 @@ public:
     static bool rimuovi_pc(PC pc);
     static PC* trova_pc(uint16_t codice);
     static std::vector<PC>* pc_meglio_di(uint ram, uint clock, uint disco);
-    static bool carica_da_file(std::fstream file);
-    static bool salva_in_file(std::fstream file);
+    static bool carica_da_file(std::string_view path);
+    static bool salva_in_file(std::string_view path);
 };
 
 
