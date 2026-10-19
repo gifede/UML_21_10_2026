@@ -4,6 +4,7 @@
 
 #include "Gestionale.h"
 
+uint16_t Gestionale::ultimo_codice = 0;
 std::vector<PC>* Gestionale::lista_pc = new std::vector<PC>();
 
 PC* Gestionale::trova_pc(uint16_t codice) {
@@ -44,3 +45,4 @@ std::vector<PC>* Gestionale::pc_meglio_di(uint ram = -1, uint clock = -1, uint d
     }
     return pcs;
 }
+

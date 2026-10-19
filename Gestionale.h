@@ -10,6 +10,7 @@
 
 
 static class Gestionale {
+    static uint16_t ultimo_codice;
     static std::vector<PC>* lista_pc;
     static int trova_idx(uint16_t codice);
 public:

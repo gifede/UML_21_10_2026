@@ -16,10 +16,9 @@ class PC {
     uint gb_disco;
     float pollici_monitor;
     uint16_t anno_acquisto;
-    static uint16_t ultimo_codice;
 
 public:
-    PC(std::string marca_c, std::string modello_c,
+    PC(uint16_t cod, std::string marca_c, std::string modello_c,
         uint cpu, uint ram, uint disco, float monitor, uint16_t anno);
 
     uint16_t get_codice() const;
